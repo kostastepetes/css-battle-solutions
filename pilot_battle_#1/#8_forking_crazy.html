@@ -1,0 +1,67 @@
+<div class="fork">
+    <div class="springs">
+      <div class="spring fill"></div>
+      <div class="spring transparent"></div>
+      <div class="spring fill"></div>
+      <div class="spring transparent"></div>
+      <div class="spring fill"></div>
+      <div class="spring transparent"></div>
+      <div class="spring fill"></div>
+    </div>
+    <div class="circular-depth"></div>
+    <div class="bottom-handle"></div>
+  </div>
+
+<style>
+  * {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  body {
+    width: 100%;
+    height: 100%;
+    background: #6592cf;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+  .fork {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .bottom-handle {
+    width: 20px;
+    height: 55px;
+    background: #060f55;
+    z-index: 1;
+  }
+  .circular-depth {
+    width: 140px;
+    height: 100px;
+    background: #060f55;
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 150px;
+    transform: translateY(5px);
+    z-index: 2;
+  }
+  .springs {
+    width: 140px;
+    height: 110px;
+    display: flex;
+    transform: translateY(15px);
+    z-index: 3;
+  }
+  .spring {
+    flex-grow: 1;
+  }
+  .fill {
+    background: #060f55;
+    border-radius: calc(140px / 7);
+  }
+  .transparent {
+    background: #6592cf;
+    border-radius: calc(140px / 7);
+  }
+</style>
