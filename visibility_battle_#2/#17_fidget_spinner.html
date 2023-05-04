@@ -1,0 +1,55 @@
+<div></div>
+<div></div>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  body {
+    background: #09042A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 16px);
+  }
+  div {
+    width: 60px;
+    height: 60px;
+    background: #E78481;
+    position: absolute;
+  }
+  div::before, div::after {
+    content: "";
+    background: #F5BB9C;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #09042A;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    --spaceX: 10px;
+    --spaceY: 3px;
+  }
+  div::before {
+    top: calc(-100% - var(--spaceY));
+  }
+  div::after {
+    bottom: calc(-100% - var(--spaceY));
+  }
+  div ~ div {
+    background: unset;
+  }
+  div ~ div::before, div ~ div::after {
+    top: 50%;
+    transform: translateY(-50%);
+    border-color: #E78481;
+    background: #09042A;
+  }
+  div ~ div::before {
+    left: calc(-100% - var(--spaceX));
+  }
+  div ~ div::after {
+    left: unset;
+    right: calc(-100% - var(--spaceX));
+  }
+</style>
